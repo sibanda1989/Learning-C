@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(void) {
+  int nGrades, grade;
+  nGrades = 0;
+  grade = 0;
+  double sum, dGrade;
+  sum = 0;
+  dGrade = 0;
+
+  printf("Enter the number of grades you want to average: \n");
+  scanf("%d", &nGrades);
+
+  for (int i=0; i<nGrades; i++){
+    printf("Enter next grade: \n");
+    scanf("%d", &grade);
+    dGrade = (double) grade;
+    sum = sum + dGrade;
+  }
+
+  printf("The average is %.2lf. \n", sum/nGrades);
+  return 0;
+}
