@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void) {
+  int min, max, endReading, reading;
+  scanf("%d", &min);
+  scanf("%d", &max);
+  reading = min + 1;
+  endReading = -999;
+
+  while(min <= reading && reading <= max){
+    scanf("%d", &reading);
+
+    if (reading == endReading){
+      break;
+    }
+
+    else if (reading < min || reading > max) {
+      printf("Alert!\n");
+      break;
+    }
+
+    else {
+      printf("Nothing to report\n");
+    }
+  }
+  return 0;
+}
